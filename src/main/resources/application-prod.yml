@@ -1,17 +1,17 @@
-
 constants:
   file:
-    directory : /home/download
+    directory : /home/download/
 
 
 
 
 Spring:
   datasource:
-    url: jdbc:log4jdbc:mariadb://112.222.157.157:5012/first_project
-    username: green2
-    password: msa502
-    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+#    url: jdbc:log4jdbc:mariadb://112.222.157.157:5012/first_project
+    url: jdbc:mariadb://127.0.0.1:3306/2025_1st_Project_BE
+    username: root
+    password: 921218
+    driver-class-name: org.mariadb.jdbc.Driver
 
 
 mybatis:

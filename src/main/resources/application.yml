@@ -1,21 +1,30 @@
 constants:
   file:
-    directory : /home/download
+    directory : /home/download/
+
   # weather api
   feign-client:
     weather-api:
       url: https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0
       service-key: fte7et4WjQ2QQTSP51SJ6VZ%2FXA3aDUYv054aZFUsGdrVOKFJxQnmrKJGh%2Box%2FcnwsvpeJmLazXr4je1K01Uoow%3D%3D
       data-type: json
+    search-api:
+      url: https://api.vworld.kr/req/search
+      key: 4B54C134-DE17-3427-8A47-1778B7BA29C4
+      service: search
+      request: search
+      type: place
+      format: json
 
-Spring:
+spring:
   application:
-    name: On_Two_Day
+    name: One_To_Day
   datasource:
-    url: jdbc:log4jdbc:mariadb://112.222.157.157:5012/first_project
-    username: green2
-    password: msa502
-    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+#    url: jdbc:log4jdbc:mariadb://112.222.157.157:5012/first_project
+    url: jdbc:mariadb://127.0.0.1:3306/2025_1st_Project_BE
+    username: root
+    password: '921218'
+    driver-class-name: org.mariadb.jdbc.Driver
   servlet:
     multipart:
       max-file-size: 10MB #하나의 파일의 최대 크기 111
